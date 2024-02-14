@@ -524,6 +524,20 @@ System.out.println(Integer.MIN_VALUE) //-2147483648
 char[] ch = str.toCharArray();
 ```
 
+#### Convert Char Array to String
+```java
+char[] charArr = new char[10];
+
+// method 1
+String s1 = new String(charArr);
+
+// method 2
+String s2 = String.valueOf(charArr);
+
+// method 3
+String s3 = String.copyValueOf(charArr);
+```
+
 #### Input single character
 ```java
 char chr = sc.next().charAt(0);  
