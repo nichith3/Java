@@ -1,5 +1,24 @@
 # DSA - Java
 
+## ArrayList
+```java
+import java.util.ArrayList;
+
+ArrayList<String> bikes = new ArrayList<String>();
+
+bikes.add("Pulsar");    // Add an element
+bikes.add(1, "Yamaha")  // Add in particular index
+bikes.get(0);           // Access an element
+bikes.set(0, "KTM");    // Change an item
+bikes.remove(0);        // Remove an item
+bikes.clear();          // Remove all items
+bikes.size();           // length of arraylist
+bikes.contains("KTM")   // Check if exists
+
+System.out.println(bikes)   // printing list
+Collections.sort(bikes);    // sort the list
+```
+
 ## Stacks
 ```java
 // Stack<type> s1 = new Stack<>();
