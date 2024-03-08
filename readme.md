@@ -613,7 +613,7 @@ System.out.println (String.format ("%.2f", num));
 
 ####  Formatting Using Printf()
 ```java
-System.out.printf("%,d%n",a); 		// 42
+System.out.printf("%d%n",a); 		// 42
 
 double a = 3.14159265359; 
 System.out.printf("%f\n", a); 		// "3.141593"
@@ -638,6 +638,9 @@ String str = "java";
 System.out.printf("%s \n", str); 	// java
 System.out.printf("%S \n", str); 	// JAVA
 
+System.out.printf("%h\n",42);   // any type to hexa
+System.out.printf("%o\n",42);   // integer to octal
+System.out.printf("%x\n",42);   // integer to hexa
 ```
 
 ####  Fromat Using DecimalFormat class
