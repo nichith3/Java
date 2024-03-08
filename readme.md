@@ -1,4 +1,5 @@
 
+
 # Java CheatSheet
 
 ## Getting Started
@@ -32,13 +33,13 @@ String s1 = "This is Java";
 ### Primitive Data Types
 | Data Type | Size   | Default | Range           |
 | --------- | ------ | ------- | --------------- |
-| `byte`    | 1 byte | 0       | \-128 to 127    |
-| `short`   | 2 byte | 0       | \-215 to 215\-1 |
-| `int`     | 4 byte | 0       | \-231 to 231\-1 |
-| `long`    | 8 byte | 0       | \-263 to 263\-1 |
+| `byte`    | 1 byte | 0       | \-128 to 127    |
+| `short`   | 2 byte | 0       | \-215 to 215\-1 |
+| `int`     | 4 byte | 0       | \-231 to 231\-1 |
+| `long`    | 8 byte | 0       | \-263 to 263\-1 |
 | `float`   | 4 byte | 0.0f    | N/A             |
 | `double`  | 8 byte | 0.0d    | N/A             |
-| `char`    | 2 byte | \\u0000 | 0 to 65535      |
+| `char`    | 2 byte | \\u0000 | 0 to 65535      |
 | `boolean` | N/A    | false   | true / false    |
 
 
@@ -424,7 +425,7 @@ switch (x) {
 ```
 
 ## Loops
-#### for Loop
+#### For Loop
 ```java
 for (int i = 0; i < 10; i++) {
   System.out.print(i);
@@ -432,7 +433,7 @@ for (int i = 0; i < 10; i++) {
 // Outputs: 0123456789
 ```
 
-#### enchanced forLoop
+#### Enchanced forLoop
 ```java
 int[] numbers = {1,2,3,4,5};
 
@@ -442,7 +443,7 @@ for (int number: numbers) {
 // Outputs: 12345
 ```
 
-#### while Loop
+#### While Loop
 ```java
 int count = 0;
 
@@ -475,7 +476,7 @@ for (int i = 0; i < 5; i++) {
 // Outputs: 01245
 ```
 
-#### break Statement
+#### Break Statement
 ```java
 for (int i = 0; i < 5; i++) {
   System.out.print(i);
@@ -520,6 +521,7 @@ multi-line comment!
 | class     | finally  | long       | strictfp** | volatile     |
 | const*    | float    | native     | super      | while        |
 
+
 ### Math function
 | Function      | Desc               |
 |---------------|--------------------|
@@ -546,7 +548,8 @@ Math.ceil(1.878)    // 1
 Math.ceil(1.3)      // 1
 ```
 
-#### Random number between 2 numbers
+
+#### Random number between 2 Numbers
 ```java
 Math.floor(Math.random() * ((max-min)+1) + min);
 ```
@@ -559,7 +562,7 @@ System.out.println(Integer.MIN_VALUE) //-2147483648
 
 ```
 
-#### Convert string to Char Array
+#### Convert String to Char Array
 ```java
 char[] ch = str.toCharArray();
 ```
@@ -578,12 +581,12 @@ String s2 = String.valueOf(charArr);
 String s3 = String.copyValueOf(charArr);
 ```
 
-#### Input single character
+#### Input Single Character
 ```java
 char chr = sc.next().charAt(0);  
 ```
 
-#### Ascii values
+#### ASCII values
 ```java
 a - 65 to z - 90
 A - 97 to Z - 122
@@ -598,17 +601,69 @@ int num3 = 97;
 char ch3 = (char)num3;  // 'A'
 ```
 
-#### 2 numbers after decimal
+---
+
+### Formatted Output
+
 ```java
 double num = 843.7395232;
 System.out.println (num);
 System.out.println (String.format ("%.2f", num));
+```
 
-// import java.text.DecimalFormat;
-final DecimalFormat df = new DecimalFormat("0.00");
-System.out.println(df.format(num));
-      
-System.out.printf("%.2f",num);
+####  Formatting Using Printf()
+```java
+System.out.printf("%,d%n",a); 		// 42
+
+double a = 3.14159265359; 
+System.out.printf("%f\n", a); 		// "3.141593"
+System.out.printf("%5.3f\n", a); 	// "3.142"
+
+// total 5 characters after decimal 2 digits
+System.out.printf("%5.2f\n", a); 	// " 3.14"
+
+Boolean b = true;
+c = false;
+Integer d = null;
+System.out.printf("%b\n", a); 	// true
+System.out.printf("%B\n", b); 	// TRUE
+System.out.printf("%b\n", c); 	// false
+System.out.printf("%B\n", d); 	// FALSE
+
+char c = 'g'; 
+System.out.printf("%c\n", c); 	// g
+System.out.printf("%C\n", c); 	// G
+
+String str = "java"; 
+System.out.printf("%s \n", str); 	// java
+System.out.printf("%S \n", str); 	// JAVA
 
 ```
 
+####  Fromat Using DecimalFormat class
+```java
+// import java.text.DecimalFormat;
+
+double num = 123.4567; 
+
+DecimalFormat ft = new DecimalFormat("####");      
+System.out.println("Without fraction part: "+ ft.format(num));
+//	Output : 123 
+
+ft = new DecimalFormat("#.##");       
+System.out.println("Formatted to precision:" + ft.format(num)); 
+// Output : 123.46
+
+ft = new DecimalFormat("#.000000"); 
+System.out.println("appended zeroes to right: "+ ft.format(num)); 
+// Output : 123.456700
+
+ft = new DecimalFormat("00000.00"); 
+System.out.println("formatting Numeric part : " + ft.format(num)); 
+// Output : 00123.46
+
+double income = 23456.789;       
+ft = new DecimalFormat("$###,###.##"); 
+System.out.println("your Formatted Income : "+ ft.format(income)); 
+// Output : $23,456.79
+```
