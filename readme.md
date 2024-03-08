@@ -1,5 +1,3 @@
-
-
 # Java CheatSheet
 
 ## Getting Started
@@ -579,6 +577,13 @@ String s2 = String.valueOf(charArr);
 
 // method 3
 String s3 = String.copyValueOf(charArr);
+```
+
+#### Split String
+```java
+String s = "Java programming";
+String arr[] = s.split(" ");
+// Output : ["Java", "programming"]
 ```
 
 #### Input Single Character
