@@ -258,6 +258,15 @@ String concat = str.concat("world");
 System.out.println(concat);
 ```
 
+#### Contactination
+```java
+'a' + 'b' = 195
+"a" + "b" = "ab"
+'a' + 1 = 98
+(char)('a'+1) = 'b'
+"a" + 1 = "a1"
+```
+
 ### String Builder
 ```java
 StringBuilder sb = new StringBuilder("Coding");
@@ -274,6 +283,19 @@ sb.append("Language");
 sb.insert(0, "My ");
 sb.delete(0, 2); //(include, exclude)
 sb.setcharAt(3, 'e');
+```
+
+#### System.out.println
+```java
+System.out.println ("Str" + new ArrayList<>());	
+// Output : Str[]
+
+System.out.println(new Integer(39) + new ArrayList<>());
+// Output : Error
+// Because no String is included
+
+System.out.println(new Integer(39) + "" + new ArrayList<>())
+// Output : 39[]
 ```
 
 
@@ -509,6 +531,7 @@ multi-line comment!
 | Math.sqrt(a)  | Square-root of a   |
 | Math.pow(a,b) | Power of b         |
 | Math.round(a) | Closest integer    |
+| Math.PI       | Gives PI Value     |
 
 
 #### Minimum & Maximum
