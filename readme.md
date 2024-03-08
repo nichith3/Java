@@ -531,6 +531,25 @@ multi-line comment!
 | Math.round(a) | Closest integer    |
 | Math.PI       | Gives PI Value     |
 
+```java
+// ceil --> rounds to upper
+Math.ceil(3.24) // 4.0
+Math.ceil(3.7) // 4.0
+
+// round --> equal or greater than 5
+Math.round(1.878)  // 2
+Math.round(1.5)    // 2
+Math.round(1.34)   // 1
+
+// floor --> rounds to lower 
+Math.ceil(1.878)    // 1
+Math.ceil(1.3)      // 1
+```
+
+#### Random number between 2 numbers
+```java
+Math.floor(Math.random() * ((max-min)+1) + min);
+```
 
 #### Minimum & Maximum
 ```java
@@ -578,3 +597,18 @@ int ch2 = (int)num2;  // 122
 int num3 = 97;
 char ch3 = (char)num3;  // 'A'
 ```
+
+#### 2 numbers after decimal
+```java
+double num = 843.7395232;
+System.out.println (num);
+System.out.println (String.format ("%.2f", num));
+
+// import java.text.DecimalFormat;
+final DecimalFormat df = new DecimalFormat("0.00");
+System.out.println(df.format(num));
+      
+System.out.printf("%.2f",num);
+
+```
+
