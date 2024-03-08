@@ -197,6 +197,12 @@ String s = "3" + 3 + "str";   // 33str
 String s = "3" + "3" + "23";  // 3323
 String s = "" + 3 + 3 + "23"; // 3323
 String s = 3 + 3 + 23;        // 29
+
+'a' + 'b'          // 195
+"a" + "b"          // "ab"
+'a' + 1           // 98
+(char)('a'+1)     // 'b'
+"a" + 1           // "a1"
 ```
 
 #### Comparison
@@ -258,14 +264,6 @@ String concat = str.concat("world");
 System.out.println(concat);
 ```
 
-#### Contactination
-```java
-'a' + 'b' = 195
-"a" + "b" = "ab"
-'a' + 1 = 98
-(char)('a'+1) = 'b'
-"a" + 1 = "a1"
-```
 
 ### String Builder
 ```java
